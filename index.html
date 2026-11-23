@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Web App - SP23-BAI-003</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; background: #f4f7f9; }
+        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h1 { color: #1a365d; }
+        button { background: #2b6cb0; color: white; border: none; padding: 10px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+        input { padding: 8px; width: 70%; border: 1px solid #cbd5e0; border-radius: 4px; }
+        .output { margin-top: 10px; font-weight: bold; color: #2f855a; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 id="student-heading">Aliza Shahid - SP23-BAI-003</h1>
+        <p id="status-banner">Cloud Computing Lab Assignment 3 - Live Deployment</p>
+
+        <hr>
+        <h3>1. Action Button Test</h3>
+        <button id="greet-btn" onclick="showMessage()">Click for Welcome Message</button>
+        <p id="greet-output" class="output"></p>
+
+        <hr>
+        <h3>2. Text Input & Submit Test</h3>
+        <input type="text" id="user-input" placeholder="Enter text here...">
+        <button id="submit-btn" onclick="displayInput()">Submit</button>
+        <p id="submitted-output" class="output"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('greet-output').innerText = "Hello Aliza! CI/CD Pipeline Verified.";
+        }
+        function displayInput() {
+            const val = document.getElementById('user-input').value;
+            document.getElementById('submitted-output').innerText = "Submitted: " + val;
+        }
+    </script>
+</body>
+</html>
